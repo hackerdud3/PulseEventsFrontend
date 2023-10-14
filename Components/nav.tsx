@@ -29,7 +29,7 @@ function NavBar() {
       {() => (
         <>
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-            <div className="h-16 flex justify-between items-center">
+            <div className=" flex h-16 justify-between items-center">
               <div className="flex justify-center items-center gap-8">
                 <Image
                   src="/pulse-black.svg"
@@ -37,7 +37,7 @@ function NavBar() {
                   width={60}
                   height={60}
                 />
-                <div className="hidden sm:flex sm:gap-6">
+                <div className="flex space-x-8">
                   {navigation.map((item) => (
                     <Link href={item.href} key={item.name}>
                       <Button variant="light">{item.name}</Button>
@@ -45,7 +45,7 @@ function NavBar() {
                   ))}
                 </div>
               </div>
-              <div className="hidden sm:flex sm:gap-2">
+              <div className="hidden sm:flex space-x-2">
                 <Link href="/signin">
                   <CustomButton
                     name="Sign In"
@@ -63,7 +63,7 @@ function NavBar() {
                   />
                 </Link>
               </div>
-              <div className="sm:hidden">
+              <div className="sm:hidden flex">
                 <Menu as="div" className="ml-3 relative">
                   <div>
                     <span className="rounded-md shadow-sm">
