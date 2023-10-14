@@ -37,7 +37,7 @@ function NavBar() {
                   width={60}
                   height={60}
                 />
-                <div className="flex mx-4">
+                <div className="hidden sm:flex sm:gap-6">
                   {navigation.map((item) => (
                     <Link href={item.href} key={item.name}>
                       <Button variant="light">{item.name}</Button>
@@ -45,7 +45,7 @@ function NavBar() {
                   ))}
                 </div>
               </div>
-              <div className="gap-2 flex">
+              <div className="hidden sm:flex sm:gap-2">
                 <Link href="/signin">
                   <CustomButton
                     name="Sign In"
