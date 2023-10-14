@@ -73,17 +73,7 @@ function EventsPage({}: Props) {
         <div className="w-full flex items-center justify-center p-8 my-12 ">
           <h1 className="text-4xl font-extrabold">Upcoming Events</h1>
         </div>
-        <iframe
-          src="//stream.crichd.vip/update/skys2.php"
-          width="100%"
-          height="500px"
-          marginheight="0"
-          marginwidth="0"
-          scrolling="no"
-          frameborder="0"
-          allowfullscreen
-          allow="encrypted-media"
-        ></iframe>
+
         <div>
           <Link href="events/addevent">
             <button>Add event</button>
