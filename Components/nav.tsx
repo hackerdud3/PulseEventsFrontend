@@ -6,8 +6,8 @@ import Link from 'next/link';
 import CustomButton from './button';
 import { Button } from '@tremor/react';
 import MenuIcon from '@mui/icons-material/Menu';
-
 import Divider from '@mui/material/Divider';
+import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline';
 
 const navigation = [
   { name: 'Dashboard', href: '/dashboard' },
@@ -26,11 +26,12 @@ function NavBar() {
 
   return (
     <Disclosure as="nav" className="bg-white shadow-sm w-full">
-      {() => (
+      {({ open }) => (
         <>
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className=" flex h-16 justify-between items-center">
               <div className="flex justify-center items-center gap-8">
+                {/* logo */}
                 <Image
                   src="/pulse-black.svg"
                   alt="pulse-events logo"
@@ -45,7 +46,7 @@ function NavBar() {
                   ))}
                 </div>
               </div>
-              <div className="hidden sm:flex space-x-2">
+              <div className=" space-x-2">
                 <Link href="/signin">
                   <CustomButton
                     name="Sign In"
@@ -130,6 +131,17 @@ function NavBar() {
                   ) : null}
                 </Menu>
               </div>
+              {/* <div className="inset-y-0 left-0 hidden sm:flex items-center">
+                <Disclosure.Button className="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
+                  <span className="absolute -inset-0.5" />
+                  <span className="sr-only">Open main menu</span>
+                  {open ? (
+                    <XMarkIcon className="block h-6 w-6" aria-hidden="true" />
+                  ) : (
+                    <Bars3Icon className="block h-6 w-6" aria-hidden="true" />
+                  )}
+                </Disclosure.Button>
+              </div> */}
             </div>
           </div>
         </>
